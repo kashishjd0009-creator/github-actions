@@ -1,0 +1,13 @@
+name: The_Heartbeat
+on: [push]
+
+jobs:
+  verify-existence:
+    name: Verify code is pushed to the repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: The Announcement
+        run: echo "The code has arrived. The factory is alive."
