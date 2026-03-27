@@ -20,5 +20,10 @@ jobs:
       - name: Run tests
         run: npm test || echo "Test doesn't exist yet."
 
+      - name: Practicing with secrets
+        env:
+          SECRET_TOKEN: ${{secrets.SECRET_TOKEN}}
+        run: echo "SECRET_TOKEN is $SECRET_TOKEN"
+
       - name: The Announcement
         run: echo "The code has arrived. The factory is alive."
